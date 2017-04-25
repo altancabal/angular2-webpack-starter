@@ -7,6 +7,8 @@ import { AppState } from '../app.service';
 import { Title } from './title';
 import { XLargeDirective } from './x-large';
 
+import { RequestService } from '../request.service';
+
 @Component({
   // The selector is what angular internally uses
   // for `document.querySelectorAll(selector)` in our index.html
@@ -14,7 +16,7 @@ import { XLargeDirective } from './x-large';
   selector: 'home',  // <home></home>
   // We need to tell Angular's Dependency Injection which providers are in our app.
   providers: [
-    Title
+    Title, RequestService
   ],
   // Our list of styles in our component. We may add more to compose many styles together
   styleUrls: [ './home.component.css' ],
@@ -27,12 +29,14 @@ export class HomeComponent implements OnInit {
   // TypeScript public modifiers
   constructor(
     public appState: AppState,
-    public title: Title
+    public title: Title,
+    public request: RequestService
   ) {}
 
   public ngOnInit() {
     console.log('hello `Home` component');
     // this.title.getData().subscribe(data => this.data = data);
+    this.request.getQuotes().subscribe((val) => console.log(val));
   }
 
   public submitState(value: string) {

@@ -29,6 +29,8 @@ import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 
+import { RequestService } from './request.service';
+
 import '../styles/styles.scss';
 import '../styles/headings.css';
 
