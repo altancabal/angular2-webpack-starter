@@ -19,15 +19,26 @@ console.log('`Detail` component loaded asynchronously');
   templateUrl: './detail.component.html',
 })
 export class DetailComponent implements OnInit {
-  jsonResponse;
+  public jsonResponse;
+  public jsonString;
+  public quotes;
 
   constructor(
     public request: RequestService
   ) {}
+  
+  public setVal(val){
+    this.jsonResponse = val;
+    this.jsonString = JSON.stringify(val);
+    this.quotes = this.jsonResponse['quotes'];
+    for (let quote of this.quotes) {
+      console.log(JSON.stringify(quote));
+    }
+  }
 
   public ngOnInit() {
     console.log('hello `Detail` component');
-    this.request.getQuotes().subscribe((val) => this.jsonResponse = JSON.stringify(val));
+    this.request.getQuotes().subscribe((val) => this.setVal(val));
   }
 
 }
