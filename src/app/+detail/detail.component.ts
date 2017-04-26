@@ -31,8 +31,13 @@ export class DetailComponent implements OnInit {
     this.jsonResponse = val;
     this.jsonString = JSON.stringify(val);
     this.quotes = this.jsonResponse['quotes'];
+    var counter = 0;
     for (let quote of this.quotes) {
       console.log(JSON.stringify(quote));
+      if(this.quotes[counter]['originPlace'] === 'sjo'){
+        this.quotes[counter]['originPlace'] = 'San José';
+      }      
+      counter++;
     }
   }
 
