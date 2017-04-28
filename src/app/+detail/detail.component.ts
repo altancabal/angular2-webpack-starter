@@ -25,6 +25,7 @@ export class DetailComponent implements OnInit {
   public jsonResponse;
   public jsonString;
   public quotes;
+  
 
   constructor(
     public request: RequestService
@@ -41,6 +42,18 @@ export class DetailComponent implements OnInit {
       console.log(JSON.stringify(quote));
       if(this.quotes[counter]['originPlace'] === 'sjo'){
         this.quotes[counter]['originPlace'] = 'San José';
+      }
+      if(this.quotes[counter]['destinationPlace'] === 'atl'){
+        this.quotes[counter]['destinationPlace'] = 'Atlanta';
+      }
+      if(this.quotes[counter]['destinationPlace'] === 'lax'){
+        this.quotes[counter]['destinationPlace'] = 'Los Angeles';
+      }
+      if(this.quotes[counter]['destinationPlace'] === 'lhr'){
+        this.quotes[counter]['destinationPlace'] = 'Londres';
+      }
+      if(this.quotes[counter]['destinationPlace'] === 'cdg'){
+        this.quotes[counter]['destinationPlace'] = 'Paris';
       }
       counter++;
     }

@@ -1,49 +1,20 @@
-<div>
-  <h1 x-large class="sample-content">Your Content Here</h1>
 
-  <hr>
+<div class="container" style="margin-top:20px;">
+  <div class="row">
+    <div class="col-12 col-md-12">
 
-  <div>
-    For hot module reloading run
-    <pre>npm run start:hmr</pre>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top img-responsive embed-responsive embed-responsive-16by9" src="https://www.travelexcellence.com/assets/frontend/img/Manuel_Antonio_National_Park1.jpg" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">Desde Costa Rica</h4>
+          <p class="card-text">Vuelos baratos desde Costa Rica a diferentes partes del mundo</p>
+          <a [routerLink]=" ['./desde-costa-rica'] "
+              routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}" class="btn btn-primary">
+              Costa Rica
+            </a>
+        </div>
+      </div>
+
+    </div>
   </div>
-
-  <hr>
-
-  <div>
-    <h4>Local State</h4>
-
-    <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
-
-      <input
-        [value]="localState.value"
-        (input)="localState.value = $event.target.value"
-        placeholder="Submit Local State to App State"
-        autofocus>
-
-      <button>Submit Value</button>
-    </form>
-    <!--
-        <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
-        Rather than wiring up two-way data-binding ourselves with [value] and (input)
-        we can use Angular's [(ngModel)] syntax
-        <input type="text" name="textInput" [(ngModel)]="localState.value" autofocus>
-      -->
-
-    <pre>this.localState = {{ localState | json }}</pre>
-
-  </div>
-
-  <div class="card" style="width: 20rem;">
-  <img class="card-img-top" src="http://mapleleafadventures.com/wp-content/uploads/2015/11/mv-swell-jeffreynolds-318x180.jpg?lbisphpreq=1" alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Desde Costa Rica</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a [routerLink]=" ['./detail'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}" class="btn btn-primary">
-        Costa Rica
-      </a>
-  </div>
-</div>
-
 </div>
