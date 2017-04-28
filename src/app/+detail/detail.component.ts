@@ -19,6 +19,9 @@ console.log('`Detail` component loaded asynchronously');
   templateUrl: './detail.component.html',
 })
 export class DetailComponent implements OnInit {
+
+  isDebug = false;
+
   public jsonResponse;
   public jsonString;
   public quotes;
@@ -32,11 +35,13 @@ export class DetailComponent implements OnInit {
     this.jsonString = JSON.stringify(val);
     this.quotes = this.jsonResponse['quotes'];
     var counter = 0;
+
+    //TODO remove the following part to be configurable or managed by the back end
     for (let quote of this.quotes) {
       console.log(JSON.stringify(quote));
       if(this.quotes[counter]['originPlace'] === 'sjo'){
         this.quotes[counter]['originPlace'] = 'San José';
-      }      
+      }
       counter++;
     }
   }
