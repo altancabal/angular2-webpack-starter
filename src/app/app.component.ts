@@ -19,6 +19,9 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
+  <div class="container" style="margin-top:20px;">
+  <div class="row">
+    <div class="col-12 col-md-12">
     <nav>
       <a [routerLink]=" ['./'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
@@ -29,14 +32,18 @@ import { AppState } from './app.service';
         Costa Rica
       </a>
     </nav>
+</div></div></div>
 
     <main>
       <router-outlet></router-outlet>
     </main>
-
+<div class="container" style="margin-top:20px;">
+  <div class="row">
+    <div class="col-12 col-md-12">
     <footer>
       <span>Todos los derechos reservados a <a href="www.exploradordeviajes.com">ExploradorDeViajes.com</a></span>
     </footer>
+    </div></div></div>
   `
 })
 export class AppComponent implements OnInit {
