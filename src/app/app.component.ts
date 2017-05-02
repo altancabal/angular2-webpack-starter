@@ -41,7 +41,7 @@ import { AppState } from './app.service';
   <div class="row">
     <div class="col-12 col-md-12">
     <footer>
-      <span>Todos los derechos reservados a <a href="www.exploradordeviajes.com">ExploradorDeViajes.com</a></span>
+      <span>Todos los derechos reservados a <a href="http://www.exploradordeviajes.com">ExploradorDeViajes.com</a></span>
     </footer>
     </div></div></div>
   `
