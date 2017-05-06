@@ -36,6 +36,69 @@ export class DetailComponent implements OnInit {
     public request: RequestService
   ) {}
   
+  private getFormattedDate(unformattedDate){
+    var dateParts = unformattedDate.split("-");
+    return dateParts[2] + "-" + this.getMonthName(dateParts[1]) + "-" + dateParts[0];
+  }
+
+  private getMonthName(monthNumber){
+    var monthName;
+    switch(monthNumber) { 
+      case "01": { 
+          monthName = "Ene";
+          break; 
+      }
+      case "02": { 
+          monthName = "Feb";
+          break; 
+      }
+      case "03": { 
+          monthName = "Mar";
+          break; 
+      }
+      case "04": { 
+          monthName = "Abr";
+          break; 
+      }
+      case "05": { 
+          monthName = "May";
+          break; 
+      }
+      case "06": { 
+          monthName = "Jun";
+          break; 
+      }
+      case "07": { 
+          monthName = "Jul";
+          break; 
+      }
+      case "08": { 
+          monthName = "Ago";
+          break; 
+      }
+      case "09": { 
+          monthName = "Sep";
+          break; 
+      }
+      case "10": { 
+          monthName = "Oct";
+          break; 
+      }
+      case "11": { 
+          monthName = "Nov";
+          break; 
+      }
+      case "12": { 
+          monthName = "Dic";
+          break; 
+      }
+      default: {
+          break; 
+      } 
+    }
+    return monthName; 
+  }
+
   public setVal(val, destination){
     this.jsonResponse = val;
     this.jsonString = JSON.stringify(val);
@@ -45,6 +108,10 @@ export class DetailComponent implements OnInit {
     //TODO remove the following part to be configurable or managed by the back end
     for (let quote of this.tmpQuotes) {
       console.log(JSON.stringify(this.tmpQuotes));
+
+      this.tmpQuotes[counter]['inboundDate'] = this.getFormattedDate(this.tmpQuotes[counter]['inboundDate']);
+      this.tmpQuotes[counter]['outboundDate'] = this.getFormattedDate(this.tmpQuotes[counter]['outboundDate']);
+
       if(this.tmpQuotes[counter]['originPlace'] === 'sjo'){
         this.tmpQuotes[counter]['originPlace'] = 'San José';
       }
