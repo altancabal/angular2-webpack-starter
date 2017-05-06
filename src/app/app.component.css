@@ -6,3 +6,8 @@ html, body{
 a.active {
   background-color: gray;
 }
+
+/* To avoid the facebook like button breaking the page width */
+#likebox-wrapper * {
+   width: 100% !important;
+}

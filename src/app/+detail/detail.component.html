@@ -20,7 +20,9 @@
       <h1 class="display-3">Vuelos baratos desde Costa Rica</h1>
       <p class="lead">Estas ofertas muestran enlaces afiliados con las tarifas más bajas que hemos encontrado. Para ver los detalles de vuelo tan solo da clic al botón con el precio, y al llegar al buscador podrás seleccionar el vuelo que prefieras.</p>
       <p>Las tarifas se actualizan con regularidad. Todos los precios son de <strong>ida y vuelta</strong>, <strong>impuestos incluidos</strong>.</p>
-      <div class="fb-like" data-href="https://www.facebook.com/exploradordeviajes/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+      <div id="likebox-wrapper">
+        <div class="fb-like" data-href="https://www.facebook.com/exploradordeviajes/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+      </div>
     </div>
 
       <h1 style="margin-top:30px;">Vuelos a Europa</h1>
@@ -32,9 +34,9 @@
               <h4 class="card-title"><span>{{ quote.$key }}</span> {{quote.destinationPlace}}</h4>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Origen: <strong>{{quote.originPlace}}</strong></li>
-              <li class="list-group-item">Ida: <strong>{{quote.outboundDate}}</strong></li>
-              <li class="list-group-item">Regreso: <strong>{{quote.inboundDate}}</strong></li>
+              <li class="list-group-item">Origen:  <strong>{{quote.originPlace}}</strong></li>
+              <li class="list-group-item">Ida:  <strong>{{quote.outboundDate}}</strong></li>
+              <li class="list-group-item">Regreso:  <strong>{{quote.inboundDate}}</strong></li>
             </ul>
             <div class="card-block">
               <a target="_blank" href="{{quote.url}}" class="btn btn-primary">${{quote.price}}</a>
