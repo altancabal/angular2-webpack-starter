@@ -75,6 +75,8 @@ export class DetailComponent implements OnInit {
         this.tmpQuotes[counter]['destinationPlace'] = 'New Jersey';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'yul'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Montreal';
+      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'hnl'){
+        this.tmpQuotes[counter]['destinationPlace'] = 'Hawaii';
       }
       //Europe      
       else if (this.tmpQuotes[counter]['destinationPlace'] === 'lhr'){
