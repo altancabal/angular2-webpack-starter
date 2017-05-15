@@ -7,7 +7,7 @@ a.active {
   background-color: gray;
 }
 
-/* To avoid the facebook like button breaking the page width */
+/* To avoid the facebook like button breaking the page width http://stackoverflow.com/questions/10656038/how-to-make-the-facebook-like-box-responsive/15116982#15116982 */
 #likebox-wrapper * {
    width: 100% !important;
 }

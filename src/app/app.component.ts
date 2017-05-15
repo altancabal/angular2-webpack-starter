@@ -22,7 +22,7 @@ import { AppState } from './app.service';
   <div class="container" style="margin-top:20px;">
   <div class="row">
     <div class="col-12 col-md-12">
-    <nav>
+    <nav>      
       <a [routerLink]=" ['./'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
         Inicio
