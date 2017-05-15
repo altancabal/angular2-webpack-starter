@@ -8,6 +8,7 @@ import {
  * see https://github.com/gdi2290/es6-promise-loader for more info
  */
 import { RequestService } from '../request.service';
+import { Router } from '@angular/router'; 
 
 console.log('`Detail` component loaded asynchronously');
 
@@ -32,8 +33,11 @@ export class DetailComponent implements OnInit {
   public restQuotes;  
   public tmpQuotes;
 
+  public originAirport;
+
   constructor(
-    public request: RequestService
+    public request: RequestService,
+    private router: Router
   ) {}
   
   private getFormattedDate(unformattedDate){
@@ -107,7 +111,7 @@ export class DetailComponent implements OnInit {
 
     //TODO remove the following part to be configurable or managed by the back end
     for (let quote of this.tmpQuotes) {
-      console.log(JSON.stringify(this.tmpQuotes));
+      //console.log(JSON.stringify(this.tmpQuotes)); //DEBUG
 
       this.tmpQuotes[counter]['inboundDate'] = this.getFormattedDate(this.tmpQuotes[counter]['inboundDate']);
       this.tmpQuotes[counter]['outboundDate'] = this.getFormattedDate(this.tmpQuotes[counter]['outboundDate']);
@@ -282,12 +286,19 @@ export class DetailComponent implements OnInit {
   }
 
   public ngOnInit() {
-    console.log('hello `Detail` component');
-    this.request.getQuotes('europe').subscribe((val) => this.setVal(val, 'europe'));
-    this.request.getQuotes('usaandca').subscribe((val) => this.setVal(val, 'usaandca'));
-    this.request.getQuotes('latinamerica').subscribe((val) => this.setVal(val, 'latinamerica'));
-    this.request.getQuotes('asia').subscribe((val) => this.setVal(val, 'asia'));
-    this.request.getQuotes('rest').subscribe((val) => this.setVal(val, 'rest'));
+      this.router.events.subscribe((url:any) => console.log(url));
+      console.log("ROUTER"+this.router.url);  // to print only path eg:"/login"
+      if(this.router.url === "/desde-costa-rica"){
+        this.originAirport = "sjo";
+      } else if (this.router.url === "/desde-nicaragua"){
+        this.originAirport = "mga";
+      }
+
+    this.request.getQuotes(this.originAirport, 'europe').subscribe((val) => this.setVal(val, 'europe'));
+    this.request.getQuotes(this.originAirport, 'usaandca').subscribe((val) => this.setVal(val, 'usaandca'));
+    this.request.getQuotes(this.originAirport, 'latinamerica').subscribe((val) => this.setVal(val, 'latinamerica'));
+    this.request.getQuotes(this.originAirport, 'asia').subscribe((val) => this.setVal(val, 'asia'));
+    this.request.getQuotes(this.originAirport, 'rest').subscribe((val) => this.setVal(val, 'rest'));
   }
 
 }
