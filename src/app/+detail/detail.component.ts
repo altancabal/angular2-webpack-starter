@@ -8,7 +8,7 @@ import {
  * see https://github.com/gdi2290/es6-promise-loader for more info
  */
 import { RequestService } from '../request.service';
-import { Router } from '@angular/router'; 
+import { Router, NavigationEnd } from '@angular/router'; 
 
 console.log('`Detail` component loaded asynchronously');
 
@@ -118,6 +118,52 @@ export class DetailComponent implements OnInit {
 
       if(this.tmpQuotes[counter]['originPlace'] === 'sjo'){
         this.tmpQuotes[counter]['originPlace'] = 'San José';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'mga') {
+        this.tmpQuotes[counter]['originPlace'] = 'Managua';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'mex') {
+        this.tmpQuotes[counter]['originPlace'] = 'Ciudad de México';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'bog') {
+        this.tmpQuotes[counter]['originPlace'] = 'Bogotá';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'mad') {
+        this.tmpQuotes[counter]['originPlace'] = 'Madrid';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'bcn') {
+        this.tmpQuotes[counter]['originPlace'] = 'Barcelona';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'eze') {
+        this.tmpQuotes[counter]['originPlace'] = 'Buenos Aires';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'lim') {
+        this.tmpQuotes[counter]['originPlace'] = 'Lima';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'ccs') {
+        this.tmpQuotes[counter]['originPlace'] = 'Caracas';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'scl') {
+        this.tmpQuotes[counter]['originPlace'] = 'Santiago';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'uio') {
+        this.tmpQuotes[counter]['originPlace'] = 'Quito';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'gye') {
+        this.tmpQuotes[counter]['originPlace'] = 'Guayaquil';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'gua') {
+        this.tmpQuotes[counter]['originPlace'] = 'Guatemala';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'hav') {
+        this.tmpQuotes[counter]['originPlace'] = 'La Habana';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'vvi') {
+        this.tmpQuotes[counter]['originPlace'] = 'Santa Cruz';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'lpb') {
+        this.tmpQuotes[counter]['originPlace'] = 'La Paz';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'sdq') {
+        this.tmpQuotes[counter]['originPlace'] = 'Santo Domingo';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'sap') {
+        this.tmpQuotes[counter]['originPlace'] = 'San Pedro Sula';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'tgu') {
+        this.tmpQuotes[counter]['originPlace'] = 'Tegucigalpa';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'asu') {
+        this.tmpQuotes[counter]['originPlace'] = 'Asunción';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'sal') {
+        this.tmpQuotes[counter]['originPlace'] = 'San Salvador';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'sju') {
+        this.tmpQuotes[counter]['originPlace'] = 'San Juan';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'pty') {
+        this.tmpQuotes[counter]['originPlace'] = 'Panamá';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'mvd') {
+        this.tmpQuotes[counter]['originPlace'] = 'Montevideo';
       }
       //USA and Canada
       if (this.tmpQuotes[counter]['destinationPlace'] === 'atl'){
@@ -286,12 +332,56 @@ export class DetailComponent implements OnInit {
   }
 
   public ngOnInit() {
+
+      this.router.events.subscribe((evt) => {
+            if (!(evt instanceof NavigationEnd)) {
+                return;
+            }
+            window.scrollTo(0, 0)
+        });
+
       this.router.events.subscribe((url:any) => console.log(url));
       console.log("ROUTER"+this.router.url);  // to print only path eg:"/login"
       if(this.router.url === "/desde-costa-rica"){
         this.originAirport = "sjo";
       } else if (this.router.url === "/desde-nicaragua"){
         this.originAirport = "mga";
+      } else if (this.router.url === "/desde-mexico"){
+        this.originAirport = "mex";
+      } else if (this.router.url === "/desde-colombia"){
+        this.originAirport = "bog";
+      } else if (this.router.url === "/desde-espana"){
+        this.originAirport = "mad";
+      } else if (this.router.url === "/desde-argentina"){
+        this.originAirport = "eze";
+      } else if (this.router.url === "/desde-peru"){
+        this.originAirport = "lim";
+      } else if (this.router.url === "/desde-venezuela"){
+        this.originAirport = "ccs";
+      } else if (this.router.url === "/desde-chile"){
+        this.originAirport = "scl";
+      } else if (this.router.url === "/desde-ecuador"){
+        this.originAirport = "uio";
+      } else if (this.router.url === "/desde-guatemala"){
+        this.originAirport = "gua";
+      } else if (this.router.url === "/desde-cuba"){
+        this.originAirport = "hav";
+      } else if (this.router.url === "/desde-bolivia"){
+        this.originAirport = "lpb";
+      } else if (this.router.url === "/desde-republica-dominicana"){
+        this.originAirport = "sdq";
+      } else if (this.router.url === "/desde-honduras"){
+        this.originAirport = "tgu";
+      } else if (this.router.url === "/desde-paraguay"){
+        this.originAirport = "asu";
+      } else if (this.router.url === "/desde-el-salvador"){
+        this.originAirport = "sal";
+      } else if (this.router.url === "/desde-puerto-rico"){
+        this.originAirport = "sju";
+      } else if (this.router.url === "/desde-panama"){
+        this.originAirport = "pty";
+      } else if (this.router.url === "/desde-uruguay"){
+        this.originAirport = "mvd";
       }
 
     this.request.getQuotes(this.originAirport, 'europe').subscribe((val) => this.setVal(val, 'europe'));

@@ -19,6 +19,7 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
+  <!--
   <div class="container" style="margin-top:20px;">
   <div class="row">
     <div class="col-12 col-md-12">
@@ -32,7 +33,7 @@ import { AppState } from './app.service';
         Costa Rica
       </a>
     </nav>
-</div></div></div>
+</div></div></div>-->
 
     <main>
       <router-outlet></router-outlet>
