@@ -1,17 +1,21 @@
 
-<div class="container" style="margin-top:20px;">
+<div class="container brand-top-spacing">
   <div class="row">
+    <div class="col-8 col-md-8 col-sm-12">
+      <h1 class="title-brand" style="margin-top:30px;"><span class="brand-text-color">Explorador de Viajes</span> Compra los vuelos más baratos a tus destinos favoritos</h1>
+    </div>
+  </div>
+  <div class="row brand-top-spacing">
     <div class="col-12 col-md-12">
-
-      <h1 style="margin-top:30px;">Ofertas de vuelo</h1>
-      <p>Selecciona tu país de origen para ver todas las ofertas que hemos estado buscando para ti</p>
+      <h1>Ofertas de vuelo</h1>
+      <p><strong class="brand-text-color">Selecciona tu país</strong> de origen para ver todas las ofertas que hemos estado buscando para ti</p>
       <div class="row">
         <div class="col-sm-4" style="margin-top:10px;" *ngFor="let country of countries">
           <div class="card">
-            <a routerLink={{country.routerLink}} routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+            <a routerLink={{country.routerLink}} routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}" class="light-gray-text-color">
               <img class="card-img-top img-responsive embed-responsive embed-responsive-16by9" src="{{country.img}}" alt="Card image cap">
               <div class="card-block">
-                <h4 class="card-title">{{country.name}}</h4>
+                <h4 class="card-title">Desde {{country.name}}</h4>
               </div>
             </a>
           </div>

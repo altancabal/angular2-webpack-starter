@@ -34,6 +34,7 @@ export class DetailComponent implements OnInit {
   public tmpQuotes;
 
   public originAirport;
+  public country;
 
   constructor(
     public request: RequestService,
@@ -169,7 +170,7 @@ export class DetailComponent implements OnInit {
       if (this.tmpQuotes[counter]['destinationPlace'] === 'atl'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Atlanta';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'lax'){
-        this.tmpQuotes[counter]['destinationPlace'] = 'Los Angeles';
+        this.tmpQuotes[counter]['destinationPlace'] = 'Los Ángeles';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'jfk'){
         this.tmpQuotes[counter]['destinationPlace'] = 'New York';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'mia'){
@@ -189,7 +190,7 @@ export class DetailComponent implements OnInit {
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'yyz'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Toronto';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'ewr'){
-        this.tmpQuotes[counter]['destinationPlace'] = 'New Jersey';
+        this.tmpQuotes[counter]['destinationPlace'] = 'Newark';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'yul'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Montreal';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'hnl'){
@@ -215,7 +216,7 @@ export class DetailComponent implements OnInit {
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'muc'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Múnich';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'fco'){
-        this.tmpQuotes[counter]['destinationPlace'] = 'Rome';
+        this.tmpQuotes[counter]['destinationPlace'] = 'Roma';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'dme'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Moscú';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'cph'){
@@ -344,44 +345,64 @@ export class DetailComponent implements OnInit {
       console.log("ROUTER"+this.router.url);  // to print only path eg:"/login"
       if(this.router.url === "/desde-costa-rica"){
         this.originAirport = "sjo";
+        this.country = "Costa Rica";
       } else if (this.router.url === "/desde-nicaragua"){
         this.originAirport = "mga";
+        this.country = "Nicaragua";
       } else if (this.router.url === "/desde-mexico"){
         this.originAirport = "mex";
+        this.country = "México";
       } else if (this.router.url === "/desde-colombia"){
         this.originAirport = "bog";
+        this.country = "Colombia";
       } else if (this.router.url === "/desde-espana"){
         this.originAirport = "mad";
+        this.country = "España";
       } else if (this.router.url === "/desde-argentina"){
         this.originAirport = "eze";
+        this.country = "Argentina";
       } else if (this.router.url === "/desde-peru"){
         this.originAirport = "lim";
+        this.country = "Perú";
       } else if (this.router.url === "/desde-venezuela"){
         this.originAirport = "ccs";
+        this.country = "Venezuela";
       } else if (this.router.url === "/desde-chile"){
         this.originAirport = "scl";
+        this.country = "Chile";
       } else if (this.router.url === "/desde-ecuador"){
         this.originAirport = "uio";
+        this.country = "Ecuador";
       } else if (this.router.url === "/desde-guatemala"){
         this.originAirport = "gua";
+        this.country = "Guatemala";
       } else if (this.router.url === "/desde-cuba"){
         this.originAirport = "hav";
+        this.country = "Cuba";
       } else if (this.router.url === "/desde-bolivia"){
         this.originAirport = "lpb";
+        this.country = "Bolivia";
       } else if (this.router.url === "/desde-republica-dominicana"){
         this.originAirport = "sdq";
+        this.country = "República Dominicana";
       } else if (this.router.url === "/desde-honduras"){
         this.originAirport = "tgu";
+        this.country = "Honduras";
       } else if (this.router.url === "/desde-paraguay"){
         this.originAirport = "asu";
+        this.country = "Paraguay";
       } else if (this.router.url === "/desde-el-salvador"){
         this.originAirport = "sal";
+        this.country = "El Salvador";
       } else if (this.router.url === "/desde-puerto-rico"){
         this.originAirport = "sju";
+        this.country = "Puerto Rico";
       } else if (this.router.url === "/desde-panama"){
         this.originAirport = "pty";
+        this.country = "Panamá";
       } else if (this.router.url === "/desde-uruguay"){
         this.originAirport = "mvd";
+        this.country = "Uruguay";
       }
 
     this.request.getQuotes(this.originAirport, 'europe').subscribe((val) => this.setVal(val, 'europe'));
