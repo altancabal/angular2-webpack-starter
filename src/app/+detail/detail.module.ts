@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { routes } from './detail.routes';
 import { DetailComponent } from './detail.component';
 
+import { FacebookModule } from 'ngx-facebook';
+
 console.log('`Detail` bundle loaded asynchronously');
 
 @NgModule({
@@ -16,6 +18,7 @@ console.log('`Detail` bundle loaded asynchronously');
   imports: [
     CommonModule,
     FormsModule,
+    FacebookModule.forRoot(),
     RouterModule.forChild(routes),
   ],
 })

@@ -1,6 +1,7 @@
 import {
   Component,
   OnInit,
+  NgZone
 } from '@angular/core';
 /*
  * We're loading this component asynchronously
@@ -8,9 +9,12 @@ import {
  * see https://github.com/gdi2290/es6-promise-loader for more info
  */
 import { RequestService } from '../request.service';
-import { Router, NavigationEnd } from '@angular/router'; 
+import { Router, NavigationEnd } from '@angular/router';
+import { FacebookModule } from 'ngx-facebook';
 
 console.log('`Detail` component loaded asynchronously');
+
+declare var window: any;
 
 @Component({
   selector: 'detail',
@@ -39,7 +43,16 @@ export class DetailComponent implements OnInit {
   constructor(
     public request: RequestService,
     private router: Router
-  ) {}
+  ) {
+
+      /*
+      (window as any)['FB'] = {
+        init: (params: "") => params,
+        login: () => {}
+      };
+*/
+      
+  }
   
   private getFormattedDate(unformattedDate){
     var dateParts = unformattedDate.split("-");
@@ -273,7 +286,9 @@ export class DetailComponent implements OnInit {
         this.tmpQuotes[counter]['destinationPlace'] = 'Doha';
       }
       //Latinamerica
-      else if (this.tmpQuotes[counter]['destinationPlace'] === 'mex'){
+      else if (this.tmpQuotes[counter]['destinationPlace'] === 'sjo'){
+        this.tmpQuotes[counter]['destinationPlace'] = 'San José, Costa Rica';
+      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'mex'){
         this.tmpQuotes[counter]['destinationPlace'] = 'México DF';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'bog'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Bogotá';
@@ -410,6 +425,8 @@ export class DetailComponent implements OnInit {
     this.request.getQuotes(this.originAirport, 'latinamerica').subscribe((val) => this.setVal(val, 'latinamerica'));
     this.request.getQuotes(this.originAirport, 'asia').subscribe((val) => this.setVal(val, 'asia'));
     this.request.getQuotes(this.originAirport, 'rest').subscribe((val) => this.setVal(val, 'rest'));
+
+    window.FB.XFBML.parse(); //Reload Facebook plugin
   }
 
 }
