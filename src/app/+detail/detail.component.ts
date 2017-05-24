@@ -1,7 +1,6 @@
 import {
   Component,
-  OnInit,
-  NgZone
+  OnInit
 } from '@angular/core';
 /*
  * We're loading this component asynchronously
@@ -10,7 +9,6 @@ import {
  */
 import { RequestService } from '../request.service';
 import { Router, NavigationEnd } from '@angular/router';
-import { FacebookModule } from 'ngx-facebook';
 
 console.log('`Detail` component loaded asynchronously');
 

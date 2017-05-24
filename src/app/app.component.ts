@@ -43,6 +43,7 @@ import { AppState } from './app.service';
     <div class="col-12 col-md-12">
     <footer>
       <span>Todos los derechos reservados a <a href="http://www.exploradordeviajes.com" class="brand-text-color">ExploradorDeViajes.com</a></span>
+      <br><span><a [routerLink]="['./politica-de-privacidad']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}" class="brand-text-color">Política de Privacidad</a> y <a [routerLink]="['./terminos-y-condiciones']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}" class="brand-text-color">Términos y Condiciones de uso</a></span>
     </footer>
     </div></div></div>
   `

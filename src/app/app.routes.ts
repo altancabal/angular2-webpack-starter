@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
+import { InfoComponent } from './info';
 import { NoContentComponent } from './no-content';
 
 import { DataResolver } from './app.resolver';
@@ -9,6 +10,8 @@ export const ROUTES: Routes = [
   { path: '',      component: HomeComponent },
   { path: 'home',  component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'politica-de-privacidad', component: InfoComponent },
+  { path: 'terminos-y-condiciones', component: InfoComponent },
   { path: 'desde-costa-rica', loadChildren: './+detail#DetailModule'},
   { path: 'desde-nicaragua', loadChildren: './+detail#DetailModule'},
   { path: 'desde-mexico', loadChildren: './+detail#DetailModule'},
