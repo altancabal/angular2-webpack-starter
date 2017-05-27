@@ -346,6 +346,7 @@ export class DetailComponent implements OnInit {
   }
 
   public ngOnInit() {
+      window.FB.XFBML.parse(); //Reload Facebook plugin
 
       this.router.events.subscribe((evt) => {
             if (!(evt instanceof NavigationEnd)) {
@@ -423,8 +424,6 @@ export class DetailComponent implements OnInit {
     this.request.getQuotes(this.originAirport, 'latinamerica').subscribe((val) => this.setVal(val, 'latinamerica'));
     this.request.getQuotes(this.originAirport, 'asia').subscribe((val) => this.setVal(val, 'asia'));
     this.request.getQuotes(this.originAirport, 'rest').subscribe((val) => this.setVal(val, 'rest'));
-
-    window.FB.XFBML.parse(); //Reload Facebook plugin
   }
 
 }
