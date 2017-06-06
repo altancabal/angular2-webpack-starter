@@ -12,6 +12,7 @@ export const ROUTES: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'politica-de-privacidad', component: InfoComponent },
   { path: 'terminos-y-condiciones', component: InfoComponent },
+  { path: 'preguntas-frecuentes', component: InfoComponent },
   { path: 'desde-costa-rica', loadChildren: './+detail#DetailModule'},
   { path: 'desde-nicaragua', loadChildren: './+detail#DetailModule'},
   { path: 'desde-mexico', loadChildren: './+detail#DetailModule'},

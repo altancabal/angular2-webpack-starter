@@ -27,6 +27,9 @@ export class InfoComponent implements OnInit {
       } else if (this.router.url === "/terminos-y-condiciones"){
         this.pageType = "terminos-y-condiciones";
         this.title = "Términos y Condiciones de uso";
+      } else if (this.router.url === "/preguntas-frecuentes"){
+        this.pageType = "preguntas-frecuentes";
+        this.title = "Preguntas frecuentes";
       }
   }
 

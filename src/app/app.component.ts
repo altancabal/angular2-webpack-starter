@@ -19,21 +19,22 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
-  <!--
-  <div class="container" style="margin-top:20px;">
-  <div class="row">
-    <div class="col-12 col-md-12">
-    <nav>      
-      <a [routerLink]=" ['./'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Inicio
-      </a>
-      <a [routerLink]=" ['./desde-costa-rica'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Costa Rica
-      </a>
-    </nav>
-</div></div></div>-->
+<!--<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}"><img src="/assets/img/logo.svg" width="30" height="30" alt=""></a>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-secondary my-2 my-sm-0">Mas</button>
+    </form>
+  </div>
+</nav>-->
 
     <main>
       <router-outlet></router-outlet>
