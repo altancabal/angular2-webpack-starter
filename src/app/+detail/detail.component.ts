@@ -346,7 +346,7 @@ export class DetailComponent implements OnInit {
   }
 
   public ngOnInit() {
-      window.FB.XFBML.parse(); //Reload Facebook plugin
+      //window.FB.XFBML.parse(); //Reload Facebook plugin
 
       this.router.events.subscribe((evt) => {
             if (!(evt instanceof NavigationEnd)) {
