@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
                       {name: 'República Dominicana', routerLink: './desde-republica-dominicana', img:'http://www.republica-dominicana-live.com/upload/playa-rincon-republica-dominicana-01.jpg'},
                       {name: 'Honduras', routerLink: './desde-honduras', img:'http://kids.nationalgeographic.com/content/dam/kids/photos/Countries/H-P/honduras-ocean-port.adapt.945.1.jpg'},
                       {name: 'Paraguay', routerLink: './desde-paraguay', img:'http://www.avina.net/avina/wp-content/uploads/2015/11/header-paraguay.jpg'},
-                      {name: 'El Salvador', routerLink: './desde-el-salvador', img:'http://www.southtravels.com/gifs/country_banner/elsalvador3.jpg'},
+                      {name: 'El Salvador', routerLink: './desde-el-salvador', img:'https://userscontent2.emaze.com/images/cb895435-c066-487b-9165-673aec192a8b/f80eeac00142261a49cd1d2c16fca71a.jpg'},
                       {name: 'Puerto Rico', routerLink: './desde-puerto-rico', img:'http://premieroffshore.com/wp-content/uploads/2016/07/resident-of-puerto-rico.jpg'},
                       {name: 'Panamá', routerLink: './desde-panama', img:'http://www.rainforestadventure.com/template/images/products/Panama%20Excursions%20-%20Panama%20City%20and%20Canal%20Tour/2.jpg'},
                       {name: 'Uruguay', routerLink: './desde-uruguay', img:'http://i2.cdn.cnn.com/cnnnext/dam/assets/160118160638-uruguaytravel-beachpuntadeleste-exlarge-169.jpg'}];
