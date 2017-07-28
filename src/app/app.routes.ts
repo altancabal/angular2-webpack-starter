@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { InfoComponent } from './info';
+import { VuelosDesdeComponent } from './vuelos-desde';
 import { NoContentComponent } from './no-content';
 
 import { DataResolver } from './app.resolver';
@@ -13,6 +14,7 @@ export const ROUTES: Routes = [
   { path: 'politica-de-privacidad', component: InfoComponent },
   { path: 'terminos-y-condiciones', component: InfoComponent },
   { path: 'preguntas-frecuentes', component: InfoComponent },
+  { path: 'vuelos-desde', component: VuelosDesdeComponent },
   { path: 'desde-costa-rica', loadChildren: './+detail#DetailModule'},
   { path: 'desde-nicaragua', loadChildren: './+detail#DetailModule'},
   { path: 'desde-mexico', loadChildren: './+detail#DetailModule'},

@@ -2,17 +2,22 @@
 <div class="container brand-top-spacing">
   <div class="row">
     <div class="col-8 col-md-8 col-sm-12">
-      <h1 class="title-brand" style="margin-top:30px;"><span class="brand-text-color">Explorador de Viajes</span> Compra los vuelos más baratos a tus destinos favoritos</h1>
+      <h1 class="title-brand" style="margin-top:30px;"><span class="brand-text-color">Explorador de Viajes</span> Los vuelos más baratos a tus destinos preferidos</h1>
     </div>
   </div>
+
+  <div id="likebox-wrapper" class="lead brand-top-spacing">
+    <div class="fb-like" data-href="https://www.facebook.com/exploradordeviajes/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+  </div>
+
   <div class="row brand-top-spacing">
     <div class="col-12 col-md-12">
-      <h1>Ofertas de vuelo</h1>
-      <p><strong class="brand-text-color">Selecciona tu país</strong> de origen para ver todas las ofertas que hemos estado buscando para ti</p>
+      <h1>Ofertas de vuelos en tu correo</h1>
+      <p><strong class="brand-text-color">Selecciona tu país</strong> de origen para suscribirte a nuestra lista de correos</p>
       <div class="row">
         <div class="col-sm-4" style="margin-top:10px;" *ngFor="let country of countries">
           <div class="card">
-            <a routerLink={{country.routerLink}} routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}" class="light-gray-text-color">
+            <a [attr.href]="country.routerLink" class="light-gray-text-color">
               <img class="card-img-top img-responsive embed-responsive embed-responsive-16by9" src="{{country.img}}" alt="Card image cap">
               <div class="card-block">
                 <h4 class="card-title">Desde {{country.name}}</h4>
@@ -21,7 +26,13 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
+  <h1 class="brand-top-spacing">Síguenos</h1>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="fb-page" data-href="https://www.facebook.com/exploradordeviajes" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/exploradordeviajes" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/exploradordeviajes">Explorador de Viajes</a></blockquote></div>
     </div>
   </div>
 </div>

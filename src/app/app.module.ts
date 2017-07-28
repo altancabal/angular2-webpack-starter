@@ -27,6 +27,7 @@ import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { InfoComponent } from './info';
+import { VuelosDesdeComponent } from './vuelos-desde';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 
@@ -57,6 +58,7 @@ type StoreType = {
     AboutComponent,
     HomeComponent,
     InfoComponent,
+    VuelosDesdeComponent,
     NoContentComponent,
     XLargeDirective
   ],
