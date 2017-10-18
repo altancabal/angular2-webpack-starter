@@ -128,6 +128,7 @@ export class DetailComponent implements OnInit {
       this.tmpQuotes[counter]['inboundDate'] = this.getFormattedDate(this.tmpQuotes[counter]['inboundDate']);
       this.tmpQuotes[counter]['outboundDate'] = this.getFormattedDate(this.tmpQuotes[counter]['outboundDate']);
 
+      //Origin places
       if(this.tmpQuotes[counter]['originPlace'] === 'sjo'){
         this.tmpQuotes[counter]['originPlace'] = 'San José';
       } else if(this.tmpQuotes[counter]['originPlace'] === 'mga') {
@@ -176,7 +177,13 @@ export class DetailComponent implements OnInit {
         this.tmpQuotes[counter]['originPlace'] = 'Panamá';
       } else if(this.tmpQuotes[counter]['originPlace'] === 'mvd') {
         this.tmpQuotes[counter]['originPlace'] = 'Montevideo';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'fll') {
+        this.tmpQuotes[counter]['originPlace'] = 'Fort Lauderdale';
+      } else if(this.tmpQuotes[counter]['originPlace'] === 'mia') {
+        this.tmpQuotes[counter]['originPlace'] = 'Miami';
       }
+
+      //Destination places
       //USA and Canada
       if (this.tmpQuotes[counter]['destinationPlace'] === 'atl'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Atlanta';
@@ -206,6 +213,12 @@ export class DetailComponent implements OnInit {
         this.tmpQuotes[counter]['destinationPlace'] = 'Montreal';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'hnl'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Hawaii';
+      } else if(this.tmpQuotes[counter]['destinationPlace'] === 'bwi') {
+        this.tmpQuotes[counter]['destinationPlace'] = 'Baltimore (Washington)';
+      } else if(this.tmpQuotes[counter]['destinationPlace'] === 'dfw') {
+        this.tmpQuotes[counter]['destinationPlace'] = 'Dallas';
+      } else if(this.tmpQuotes[counter]['destinationPlace'] === 'ewr') {
+        this.tmpQuotes[counter]['destinationPlace'] = 'Newark (New York)';
       }
       //Europe      
       else if (this.tmpQuotes[counter]['destinationPlace'] === 'lhr'){
@@ -252,6 +265,8 @@ export class DetailComponent implements OnInit {
         this.tmpQuotes[counter]['destinationPlace'] = 'Milán';
       } else if (this.tmpQuotes[counter]['destinationPlace'] === 'prg'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Praga';
+      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'kef'){
+        this.tmpQuotes[counter]['destinationPlace'] = 'Reikiavik';
       }
       //Asia
       else if (this.tmpQuotes[counter]['destinationPlace'] === 'pek'){
@@ -417,6 +432,12 @@ export class DetailComponent implements OnInit {
       } else if (this.router.url === "/desde-uruguay"){
         this.originAirport = "mvd";
         this.country = "Uruguay";
+      } else if (this.router.url === "/desde-mia"){
+        this.originAirport = "mia";
+        this.country = "Miami";
+      } else if (this.router.url === "/desde-fll"){
+        this.originAirport = "fll";
+        this.country = "Fort Lauderdale";
       }
 
     this.request.getQuotes(this.originAirport, 'europe').subscribe((val) => this.setVal(val, 'europe'));

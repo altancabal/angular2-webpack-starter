@@ -35,6 +35,8 @@ export const ROUTES: Routes = [
   { path: 'desde-puerto-rico', loadChildren: './+detail#DetailModule'},
   { path: 'desde-panama', loadChildren: './+detail#DetailModule'},
   { path: 'desde-uruguay', loadChildren: './+detail#DetailModule'},
+  { path: 'desde-fll', loadChildren: './+detail#DetailModule'},
+  { path: 'desde-mia', loadChildren: './+detail#DetailModule'},
   { path: 'barrel', loadChildren: './+barrel#BarrelModule'},
   { path: '**',    component: NoContentComponent },
 ];

@@ -47,7 +47,9 @@ export class VuelosDesdeComponent implements OnInit {
                       {name: 'El Salvador', routerLink: '/desde-el-salvador', img:'https://userscontent2.emaze.com/images/cb895435-c066-487b-9165-673aec192a8b/f80eeac00142261a49cd1d2c16fca71a.jpg'},
                       {name: 'Puerto Rico', routerLink: '/desde-puerto-rico', img:'http://premieroffshore.com/wp-content/uploads/2016/07/resident-of-puerto-rico.jpg'},
                       {name: 'Panamá', routerLink: '/desde-panama', img:'http://www.rainforestadventure.com/template/images/products/Panama%20Excursions%20-%20Panama%20City%20and%20Canal%20Tour/2.jpg'},
-                      {name: 'Uruguay', routerLink: '/desde-uruguay', img:'http://i2.cdn.cnn.com/cnnnext/dam/assets/160118160638-uruguaytravel-beachpuntadeleste-exlarge-169.jpg'}];
+                      {name: 'Uruguay', routerLink: '/desde-uruguay', img:'http://i2.cdn.cnn.com/cnnnext/dam/assets/160118160638-uruguaytravel-beachpuntadeleste-exlarge-169.jpg'},
+                      {name: 'Fort Lauderdale', routerLink: '/desde-fll', img:'http://www.rainforestadventure.com/template/images/products/Panama%20Excursions%20-%20Panama%20City%20and%20Canal%20Tour/2.jpg'},
+                      {name: 'Miami', routerLink: '/desde-mia', img:'http://www.rainforestadventure.com/template/images/products/Panama%20Excursions%20-%20Panama%20City%20and%20Canal%20Tour/2.jpg'}];
   // TypeScript public modifiers
   constructor(
     public request: RequestService
