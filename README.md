@@ -1,6 +1,9 @@
 # exploradordeviajes-ng
 The Angular4 UI for the ExploradorDeViajes project.
 
+##First time install
+npm install
+
 ##Run 
 npm start
 

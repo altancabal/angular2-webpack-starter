@@ -21,156 +21,141 @@
         </div>
       </div>
 
-      <p class="lead brand-top-spacing" >Estas ofertas muestran enlaces afiliados con las tarifas más bajas que hemos encontrado. Para ver los detalles de vuelo tan solo da clic al botón con el precio, y al llegar al buscador podrás seleccionar el vuelo que prefieras.</p>
-      <p>Las tarifas se actualizan con regularidad. Todos los precios son de <strong>ida y vuelta</strong>, <strong>impuestos incluidos</strong>.</p>
-      <div id="likebox-wrapper">
-        <div class="fb-like" data-href="https://www.facebook.com/exploradordeviajes/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-      </div>
-
       <h1 class="brand-top-spacing">Vuelos a Europa</h1>
-      <p>Para ver los detalles del vuelo dale click al <strong class="brand-text-color">botón</strong> que muestra el precio</p>
       <div class="row">
-        <div class="col-sm-4" style="margin-top:10px;" *ngFor="let quote of europeQuotes">
-          <div class="card">
-            <img class="card-img-top img-responsive embed-responsive embed-responsive-16by9" src="{{quote.destinationImgUrl}}" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title"><span>{{ quote.$key }}</span> {{quote.destinationPlace}}</h4>
+
+          <div class="panel panel-default" class="col-sm-12">
+              <!-- Table -->
+              <table class="table">
+                  <tr>
+                      <th>Destino</th>
+                      <th>Salida</th>
+                      <th>Retorno</th>
+                      <th>Fuente</th>
+                      <th>Encontrado el</th>
+                      <th>Precio</th>
+                      <th>Momondo</th>
+                  </tr>
+                  <tr *ngFor="let quote of europeQuotes">
+                      <td>{{quote.destinationPlace}}</td>
+                      <td>{{quote.outboundDate}}</td> 
+                      <td>{{quote.inboundDate}}</td>
+                      <td>{{quote.source}}</td>
+                      <td>{{quote.addedDate}}</td>
+                      <td><a target="_blank" href="{{quote.url}}" class="btn btn-primary">${{quote.price}}</a></td>
+                      <td><a target="_blank" href="{{quote.momondoUrl}}" class="btn btn-primary">M</a></td>
+                    </tr>
+              </table>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Origen:  <strong>{{quote.originPlace}}</strong></li>
-              <li class="list-group-item">Ida:  <strong>{{quote.outboundDate}}</strong></li>
-              <li class="list-group-item">Regreso:  <strong>{{quote.inboundDate}}</strong></li>
-            </ul>
-            <div class="card-block">
-              <a target="_blank" href="{{quote.url}}" class="btn btn-primary">${{quote.price}}</a>
-            </div>
-          </div>
-        </div>
+
       </div>
 
      <h1 class="brand-top-spacing">Vuelos a Estados Unidos y Canadá</h1>
-     <p>Para ver los detalles del vuelo dale click al <strong class="brand-text-color">botón</strong> que muestra el precio</p>
       <div class="row">
-        <div class="col-sm-4" style="margin-top:10px;" *ngFor="let quote of quotes">
-          <div class="card">
-            <img class="card-img-top img-responsive embed-responsive embed-responsive-16by9" src="{{quote.destinationImgUrl}}" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title"><span>{{ quote.$key }}</span> {{quote.destinationPlace}}</h4>
+          <div class="panel panel-default" class="col-sm-12">
+              <!-- Table -->
+              <table class="table">
+                  <tr>
+                      <th>Destino</th>
+                      <th>Salida</th>
+                      <th>Retorno</th>
+                      <th>Fuente</th>
+                      <th>Encontrado el</th>
+                      <th>Precio</th>
+                      <th>Momondo</th>
+                  </tr>
+                  <tr *ngFor="let quote of quotes">
+                      <td>{{quote.destinationPlace}}</td>
+                      <td>{{quote.outboundDate}}</td> 
+                      <td>{{quote.inboundDate}}</td>
+                      <td>{{quote.source}}</td>
+                      <td>{{quote.addedDate}}</td>
+                      <td><a target="_blank" href="{{quote.url}}" class="btn btn-primary">${{quote.price}}</a></td>
+                      <td><a target="_blank" href="{{quote.momondoUrl}}" class="btn btn-primary">M</a></td>
+                    </tr>
+              </table>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Origen: <strong>{{quote.originPlace}}</strong></li>
-              <li class="list-group-item">Ida: <strong>{{quote.outboundDate}}</strong></li>
-              <li class="list-group-item">Regreso: <strong>{{quote.inboundDate}}</strong></li>
-            </ul>
-            <div class="card-block">
-              <a target="_blank" href="{{quote.url}}" class="btn btn-primary">${{quote.price}}</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <h1 class="brand-top-spacing">Suscríbete y síguenos</h1>
-      <div class="row">
-        <div class="col-sm-4" style="margin-top:10px;" *ngIf="country === 'Costa Rica'">
-          <div class="card">
-            <img class="card-img-top img-responsive embed-responsive embed-responsive-16by9" src="https://www.mapfretecuidamos.com/tecuidamos/es/docs/img/ir-de-viaje.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">Suscríbete a nuestra lista de correos para recibir vuelos baratos desde {{country}} cada semana</h4>
-            </div>
-            <div class="card-block">
-              <a target="_blank" href="http://eepurl.com/cM8jVT" class="btn btn-primary">Suscribirme</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4" style="margin-top:10px;" *ngIf="country === 'México'">
-          <div class="card">
-            <img class="card-img-top img-responsive embed-responsive embed-responsive-16by9" src="https://www.mapfretecuidamos.com/tecuidamos/es/docs/img/ir-de-viaje.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">Suscríbete a nuestra lista de correos para recibir vuelos baratos desde {{country}} cada semana</h4>
-            </div>
-            <div class="card-block">
-              <a target="_blank" href="http://eepurl.com/cSi6vj" class="btn btn-primary">Suscribirme</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4" style="margin-top:10px;" *ngIf="country === 'Colombia'">
-          <div class="card">
-            <img class="card-img-top img-responsive embed-responsive embed-responsive-16by9" src="https://www.mapfretecuidamos.com/tecuidamos/es/docs/img/ir-de-viaje.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">Suscríbete a nuestra lista de correos para recibir vuelos baratos desde {{country}} cada semana</h4>
-            </div>
-            <div class="card-block">
-              <a target="_blank" href="http://eepurl.com/cSi7lr" class="btn btn-primary">Suscribirme</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4" style="margin-top:10px;">
-          <div class="fb-page" data-href="https://www.facebook.com/exploradordeviajes" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/exploradordeviajes" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/exploradordeviajes">Explorador de Viajes</a></blockquote></div>
-        </div>
       </div>
 
       <h1 class="brand-top-spacing">Vuelos a Latinoamérica</h1>
-      <p>Para ver los detalles del vuelo dale click al <strong class="brand-text-color">botón</strong> que muestra el precio</p>
       <div class="row">
-        <div class="col-sm-4" style="margin-top:10px;" *ngFor="let quote of latinamericaQuotes">
-          <div class="card">
-            <img class="card-img-top img-responsive embed-responsive embed-responsive-16by9" src="{{quote.destinationImgUrl}}" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title"><span>{{ quote.$key }}</span> {{quote.destinationPlace}}</h4>
+          <div class="panel panel-default" class="col-sm-12">
+              <!-- Table -->
+              <table class="table">
+                  <tr>
+                      <th>Destino</th>
+                      <th>Salida</th>
+                      <th>Retorno</th>
+                      <th>Fuente</th>
+                      <th>Encontrado el</th>
+                      <th>Precio</th>
+                      <th>Momondo</th>
+                  </tr>
+                  <tr *ngFor="let quote of latinamericaQuotes">
+                      <td>{{quote.destinationPlace}}</td>
+                      <td>{{quote.outboundDate}}</td> 
+                      <td>{{quote.inboundDate}}</td>
+                      <td>{{quote.source}}</td>
+                      <td>{{quote.addedDate}}</td>
+                      <td><a target="_blank" href="{{quote.url}}" class="btn btn-primary">${{quote.price}}</a></td>
+                      <td><a target="_blank" href="{{quote.momondoUrl}}" class="btn btn-primary">M</a></td>
+                    </tr>
+              </table>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Origen: <strong>{{quote.originPlace}}</strong></li>
-              <li class="list-group-item">Ida: <strong>{{quote.outboundDate}}</strong></li>
-              <li class="list-group-item">Regreso: <strong>{{quote.inboundDate}}</strong></li>
-            </ul>
-            <div class="card-block">
-              <a target="_blank" href="{{quote.url}}" class="btn btn-primary">${{quote.price}}</a>
-            </div>
-          </div>
-        </div>
       </div>
 
       <h1 class="brand-top-spacing">Vuelos a Asia</h1>
-      <p>Para ver los detalles del vuelo dale click al <strong class="brand-text-color">botón</strong> que muestra el precio</p>
       <div class="row">
-        <div class="col-sm-4" style="margin-top:10px;" *ngFor="let quote of asiaQuotes">
-          <div class="card">
-            <img class="card-img-top img-responsive embed-responsive embed-responsive-16by9" src="{{quote.destinationImgUrl}}" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title"><span>{{ quote.$key }}</span> {{quote.destinationPlace}}</h4>
+          <div class="panel panel-default" class="col-sm-12">
+              <!-- Table -->
+              <table class="table">
+                  <tr>
+                      <th>Destino</th>
+                      <th>Salida</th>
+                      <th>Retorno</th>
+                      <th>Fuente</th>
+                      <th>Encontrado el</th>
+                      <th>Precio</th>
+                      <th>Momondo</th>
+                  </tr>
+                  <tr *ngFor="let quote of asiaQuotes">
+                      <td>{{quote.destinationPlace}}</td>
+                      <td>{{quote.outboundDate}}</td> 
+                      <td>{{quote.inboundDate}}</td>
+                      <td>{{quote.source}}</td>
+                      <td>{{quote.addedDate}}</td>
+                      <td><a target="_blank" href="{{quote.url}}" class="btn btn-primary">${{quote.price}}</a></td>
+                      <td><a target="_blank" href="{{quote.momondoUrl}}" class="btn btn-primary">M</a></td>
+                    </tr>
+              </table>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Origen: <strong>{{quote.originPlace}}</strong></li>
-              <li class="list-group-item">Ida: <strong>{{quote.outboundDate}}</strong></li>
-              <li class="list-group-item">Regreso: <strong>{{quote.inboundDate}}</strong></li>
-            </ul>
-            <div class="card-block">
-              <a target="_blank" href="{{quote.url}}" class="btn btn-primary">${{quote.price}}</a>
-            </div>
-          </div>
-        </div>
       </div>
 
       <h1 class="brand-top-spacing">Vuelos al Resto del Mundo</h1>
-      <p>Para ver los detalles del vuelo dale click al <strong class="brand-text-color">botón</strong> que muestra el precio</p>
       <div class="row">
-        <div class="col-sm-4" style="margin-top:10px;" *ngFor="let quote of restQuotes">
-          <div class="card">
-            <img class="card-img-top img-responsive embed-responsive embed-responsive-16by9" src="{{quote.destinationImgUrl}}" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title"><span>{{ quote.$key }}</span> {{quote.destinationPlace}}</h4>
+          <div class="panel panel-default" class="col-sm-12">
+              <!-- Table -->
+              <table class="table">
+                  <tr>
+                      <th>Destino</th>
+                      <th>Salida</th>
+                      <th>Retorno</th>
+                      <th>Fuente</th>
+                      <th>Encontrado el</th>
+                      <th>Precio</th>
+                      <th>Momondo</th>
+                  </tr>
+                  <tr *ngFor="let quote of restQuotes">
+                      <td>{{quote.destinationPlace}}</td>
+                      <td>{{quote.outboundDate}}</td> 
+                      <td>{{quote.inboundDate}}</td>
+                      <td>{{quote.source}}</td>
+                      <td>{{quote.addedDate}}</td>
+                      <td><a target="_blank" href="{{quote.url}}" class="btn btn-primary">${{quote.price}}</a></td>
+                      <td><a target="_blank" href="{{quote.momondoUrl}}" class="btn btn-primary">M</a></td>
+                    </tr>
+              </table>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Origen: <strong>{{quote.originPlace}}</strong></li>
-              <li class="list-group-item">Ida: <strong>{{quote.outboundDate}}</strong></li>
-              <li class="list-group-item">Regreso: <strong>{{quote.inboundDate}}</strong></li>
-            </ul>
-            <div class="card-block">
-              <a target="_blank" href="{{quote.url}}" class="btn btn-primary">${{quote.price}}</a>
-            </div>
-          </div>
-        </div>
       </div>
 
       <router-outlet></router-outlet>

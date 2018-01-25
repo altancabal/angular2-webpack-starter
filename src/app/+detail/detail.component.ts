@@ -129,223 +129,228 @@ export class DetailComponent implements OnInit {
       this.tmpQuotes[counter]['outboundDate'] = this.getFormattedDate(this.tmpQuotes[counter]['outboundDate']);
 
       //Origin places
-      if(this.tmpQuotes[counter]['originPlace'] === 'sjo'){
+      if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'sjo'){
         this.tmpQuotes[counter]['originPlace'] = 'San José';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'mga') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'mga') {
         this.tmpQuotes[counter]['originPlace'] = 'Managua';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'mex') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'mex') {
         this.tmpQuotes[counter]['originPlace'] = 'Ciudad de México';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'bog') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'bog') {
         this.tmpQuotes[counter]['originPlace'] = 'Bogotá';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'mad') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'mad') {
         this.tmpQuotes[counter]['originPlace'] = 'Madrid';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'bcn') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'bcn') {
         this.tmpQuotes[counter]['originPlace'] = 'Barcelona';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'eze') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'eze') {
         this.tmpQuotes[counter]['originPlace'] = 'Buenos Aires';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'lim') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'lim') {
         this.tmpQuotes[counter]['originPlace'] = 'Lima';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'ccs') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'ccs') {
         this.tmpQuotes[counter]['originPlace'] = 'Caracas';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'scl') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'scl') {
         this.tmpQuotes[counter]['originPlace'] = 'Santiago';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'uio') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'uio') {
         this.tmpQuotes[counter]['originPlace'] = 'Quito';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'gye') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'gye') {
         this.tmpQuotes[counter]['originPlace'] = 'Guayaquil';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'gua') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'gua') {
         this.tmpQuotes[counter]['originPlace'] = 'Guatemala';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'hav') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'hav') {
         this.tmpQuotes[counter]['originPlace'] = 'La Habana';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'vvi') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'vvi') {
         this.tmpQuotes[counter]['originPlace'] = 'Santa Cruz';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'lpb') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'lpb') {
         this.tmpQuotes[counter]['originPlace'] = 'La Paz';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'sdq') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'sdq') {
         this.tmpQuotes[counter]['originPlace'] = 'Santo Domingo';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'sap') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'sap') {
         this.tmpQuotes[counter]['originPlace'] = 'San Pedro Sula';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'tgu') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'tgu') {
         this.tmpQuotes[counter]['originPlace'] = 'Tegucigalpa';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'asu') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'asu') {
         this.tmpQuotes[counter]['originPlace'] = 'Asunción';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'sal') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'sal') {
         this.tmpQuotes[counter]['originPlace'] = 'San Salvador';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'sju') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'sju') {
         this.tmpQuotes[counter]['originPlace'] = 'San Juan';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'pty') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'pty') {
         this.tmpQuotes[counter]['originPlace'] = 'Panamá';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'mvd') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'mvd') {
         this.tmpQuotes[counter]['originPlace'] = 'Montevideo';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'fll') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'fll') {
         this.tmpQuotes[counter]['originPlace'] = 'Fort Lauderdale';
-      } else if(this.tmpQuotes[counter]['originPlace'] === 'mia') {
+      } else if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'mia') {
         this.tmpQuotes[counter]['originPlace'] = 'Miami';
       }
 
       //Destination places
       //USA and Canada
-      if (this.tmpQuotes[counter]['destinationPlace'] === 'atl'){
+      if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'atl'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Atlanta';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'lax'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'lax'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Los Ángeles';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'jfk'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'jfk'){
         this.tmpQuotes[counter]['destinationPlace'] = 'New York';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'mia'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'mia'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Miami';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'mco'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'mco'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Orlando';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'yvr'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'yvr'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Vancouver';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'ord'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'ord'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Chicago';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'den'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'den'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Denver';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'sfo'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'sfo'){
         this.tmpQuotes[counter]['destinationPlace'] = 'San Francisco';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'las'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'las'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Las Vegas';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'yyz'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'yyz'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Toronto';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'ewr'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'ewr'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Newark';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'yul'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'yul'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Montreal';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'hnl'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'hnl'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Hawaii';
-      } else if(this.tmpQuotes[counter]['destinationPlace'] === 'bwi') {
+      } else if(this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'bwi') {
         this.tmpQuotes[counter]['destinationPlace'] = 'Baltimore (Washington)';
-      } else if(this.tmpQuotes[counter]['destinationPlace'] === 'dfw') {
+      } else if(this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'dfw') {
         this.tmpQuotes[counter]['destinationPlace'] = 'Dallas';
-      } else if(this.tmpQuotes[counter]['destinationPlace'] === 'ewr') {
+      } else if(this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'ewr') {
         this.tmpQuotes[counter]['destinationPlace'] = 'Newark (New York)';
       }
       //Europe      
-      else if (this.tmpQuotes[counter]['destinationPlace'] === 'lhr'){
+      else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'lhr'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Londres';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'cdg'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'cdg'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Paris';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'ams'){
-        this.tmpQuotes[counter]['destinationPlace'] = 'Amsterdam';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'fra'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'ams'){
+        this.tmpQuotes[counter]['destinationPlace'] = 'Ámsterdam';
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'fra'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Frankfurt';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'mad'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'mad'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Madrid';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'bcn'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'bcn'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Barcelona';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'lgw'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'lgw'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Londres';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'ist'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'ist'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Estambul';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'muc'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'muc'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Múnich';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'fco'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'fco'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Roma';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'dme'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'dme'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Moscú';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'cph'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'cph'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Copenhague';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'dub'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'dub'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Dublín';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'zrh'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'zrh'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Zúrich';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'osl'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'osl'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Oslo';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'arn'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'arn'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Estocolmo';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'lis'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'lis'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Lisboa';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'bru'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'bru'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Bruselas';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'txl'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'txl'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Berlín';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'ath'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'ath'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Atenas';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'mxp'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'mxp'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Milán';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'prg'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'prg'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Praga';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'kef'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'kef'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Reikiavik';
       }
       //Asia
-      else if (this.tmpQuotes[counter]['destinationPlace'] === 'pek'){
+      else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'pek'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Beijing';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'dxb'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'dxb'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Dubai';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'hnd'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'hnd'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Tokyo';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'icn'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'icn'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Seúl';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'bkk'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'bkk'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Bangkok';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'del'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'del'){
         this.tmpQuotes[counter]['destinationPlace'] = 'New Delhi';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'hkg'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'hkg'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Hong Kong';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'pvg'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'pvg'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Shanghai';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'sin'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'sin'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Singapur';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'cgk'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'cgk'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Jakarta';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'kul'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'kul'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Kuala Lumpur';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'bom'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'bom'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Mumbai';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'mnl'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'mnl'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Manila';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'doh'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'doh'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Doha';
       }
       //Latinamerica
-      else if (this.tmpQuotes[counter]['destinationPlace'] === 'sjo'){
+      else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'sjo'){
         this.tmpQuotes[counter]['destinationPlace'] = 'San José, Costa Rica';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'mex'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'mex'){
         this.tmpQuotes[counter]['destinationPlace'] = 'México DF';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'bog'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'bog'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Bogotá';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'cun'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'cun'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Cancún';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'lim'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'lim'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Lima';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'gig'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'gig'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Rio de Janeiro';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'gua'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'gua'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Guatemala';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'gru'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'gru'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Sao Paulo';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'scq'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'scq'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Santiago';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'pty'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'pty'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Panamá';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'eze'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'eze'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Buenos Aires';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'mga'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'mga'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Managua';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'lpb'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'lpb'){
         this.tmpQuotes[counter]['destinationPlace'] = 'La Paz';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'ccs'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'ccs'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Caracas';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'hav'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'hav'){
         this.tmpQuotes[counter]['destinationPlace'] = 'La Habana';
       }
       //Rest of the world
-      else if (this.tmpQuotes[counter]['destinationPlace'] === 'syd'){
+      else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'syd'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Sydney';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'mel'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'mel'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Melbourne';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'akl'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'akl'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Auckland';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'jnb'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'jnb'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Johannesburg';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'cai'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'cai'){
         this.tmpQuotes[counter]['destinationPlace'] = 'El Cairo';
-      } else if (this.tmpQuotes[counter]['destinationPlace'] === 'cmn'){
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'cmn'){
         this.tmpQuotes[counter]['destinationPlace'] = 'Casablanca';
       }
       counter++;
     }
+    this.tmpQuotes.sort((a, b) => {
+        if (parseInt(a.price) < parseInt(b.price)){ console.log("a.price:"+a.price); return -1;} 
+        else if (parseInt(a.price) > parseInt(b.price)) return 1;
+        else return 0;
+    });
     if(destination === 'usaandca'){
       this.quotes = this.tmpQuotes;
     } else if (destination == 'europe'){
