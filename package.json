@@ -1,15 +1,15 @@
 {
-  "name": "angular2-webpack-starter",
-  "version": "6.0.0",
-  "description": "An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by AngularClass",
+  "name": "exploradordeviajes-ng",
+  "version": "2.0.0",
+  "description": "The interface for the search mechanism of ExploradorDeViajes.com",
   "keywords": [
     "angular",
     "angular2",
     "webpack",
     "typescript"
   ],
-  "author": "Patrick Stapleton <patrick@angularclass.com>",
-  "homepage": "https://github.com/angularclass/angular2-webpack-starter",
+  "author": "Altan Cabal <altan@exploradordeviajes.com>",
+  "homepage": "https://exploradordeviajes.com",
   "license": "MIT",
   "scripts": {
     "build:aot:prod": "npm run clean:dist && npm run clean:aot && webpack --config config/webpack.prod.js  --progress --profile --bail",

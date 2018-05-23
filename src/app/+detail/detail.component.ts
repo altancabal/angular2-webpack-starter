@@ -219,6 +219,8 @@ export class DetailComponent implements OnInit {
         this.tmpQuotes[counter]['destinationPlace'] = 'Dallas';
       } else if(this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'ewr') {
         this.tmpQuotes[counter]['destinationPlace'] = 'Newark (New York)';
+      } else if(this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'fll') {
+        this.tmpQuotes[counter]['destinationPlace'] = 'Fort Lauderdale';
       }
       //Europe      
       else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'lhr'){
@@ -329,6 +331,8 @@ export class DetailComponent implements OnInit {
         this.tmpQuotes[counter]['destinationPlace'] = 'Caracas';
       } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'hav'){
         this.tmpQuotes[counter]['destinationPlace'] = 'La Habana';
+      } else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'scl'){
+        this.tmpQuotes[counter]['destinationPlace'] = 'Santiago';
       }
       //Rest of the world
       else if (this.tmpQuotes[counter]['destinationPlace'].toLowerCase() === 'syd'){

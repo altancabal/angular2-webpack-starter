@@ -19,3 +19,6 @@ Visual Studio Code
 
 ##How to add new destination?
 - Add new destination to "Destination Places" on detail.component.ts
+
+##Change version
+- In the package.json file. In the "version" property
