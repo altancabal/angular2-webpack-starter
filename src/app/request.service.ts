@@ -11,7 +11,7 @@ export class RequestService {
     'http://localhost:8080/browsequotes/v1.0/cr/usd/es-ES/sjo/usaandca/anytime/anytime';*/
 
     private hostUrl: string = 'http://exploradordeviajes01.us-east-1.elasticbeanstalk.com';
-    private initialParamsUrl: string = '/browsequotes/v1.0/cr/usd/es-ES/';
+    private initialParamsUrl: string = '/quotes/v1.0/search/cr/usd/es-ES/';
     private finalParamsUrl: string = '/anytime/anytime';
 
   constructor (private http: Http) {  }
