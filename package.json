@@ -1,6 +1,6 @@
 {
   "name": "exploradordeviajes-ng",
-  "version": "2.0.2.1",
+  "version": "2.0.3",
   "description": "The interface for the search mechanism of ExploradorDeViajes.com",
   "keywords": [
     "angular",
@@ -83,7 +83,7 @@
     "@angularclass/hmr": "~1.2.2",
     "@angularclass/hmr-loader": "~3.0.2",
     "core-js": "^2.4.1",
-    "http-server": "^0.9.0",
+    "http-server": "^0.11.1",
     "ie-shim": "^0.1.0",
     "jasmine-core": "^2.5.2",
     "ngx-facebook": "^2.4.0",

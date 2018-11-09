@@ -128,6 +128,10 @@ export class DetailComponent implements OnInit {
       this.tmpQuotes[counter]['inboundDate'] = this.getFormattedDate(this.tmpQuotes[counter]['inboundDate']);
       this.tmpQuotes[counter]['outboundDate'] = this.getFormattedDate(this.tmpQuotes[counter]['outboundDate']);
 
+      this.tmpQuotes[counter]['yearPctPrice'] = ((quote.price-quote.yearAvgPrice)/quote.yearAvgPrice)*100;
+      this.tmpQuotes[counter]['monthPctPrice'] = ((quote.price-quote.monthAvgPrice)/quote.monthAvgPrice)*100;
+      this.tmpQuotes[counter]['weekPctPrice'] = ((quote.price-quote.weekAvgPrice)/quote.weekAvgPrice)*100;
+
       //Origin places
       if(this.tmpQuotes[counter]['originPlace'].toLowerCase() === 'sjo'){
         this.tmpQuotes[counter]['originPlace'] = 'San José';
@@ -350,11 +354,11 @@ export class DetailComponent implements OnInit {
       }
       counter++;
     }
-    this.tmpQuotes.sort((a, b) => {
-        if (parseInt(a.price) < parseInt(b.price)){ console.log("a.price:"+a.price); return -1;} 
-        else if (parseInt(a.price) > parseInt(b.price)) return 1;
-        else return 0;
+
+    this.tmpQuotes.sort(function(a, b) {
+      return parseFloat(a.yearPctPrice) - parseFloat(b.yearPctPrice);
     });
+
     if(destination === 'usaandca'){
       this.quotes = this.tmpQuotes;
     } else if (destination == 'europe'){
