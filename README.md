@@ -4,6 +4,8 @@ The Angular4 UI for the ExploradorDeViajes project.
 ##First time install
 npm install
 
+Note: if you have problems with any dependencies, remove the package-lock.json file and run the npm install command again
+
 ##Run 
 npm start
 
