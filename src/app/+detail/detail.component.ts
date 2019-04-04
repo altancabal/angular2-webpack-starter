@@ -125,6 +125,13 @@ export class DetailComponent implements OnInit {
     for (let quote of this.tmpQuotes) {
       //console.log(JSON.stringify(this.tmpQuotes)); //DEBUG
 
+      if(this.router.url === "/desde-peru"){
+        this.tmpQuotes[counter]['kayakUrl'] = this.tmpQuotes[counter]['kayakUrl'].replace("www.es.kayak.com", "www.kayak.com.pe");
+      }
+      else if(this.router.url === "/desde-mexico"){
+        this.tmpQuotes[counter]['kayakUrl'] = this.tmpQuotes[counter]['kayakUrl'].replace("www.es.kayak.com", "www.kayak.com.mx");
+      }
+
       this.tmpQuotes[counter]['inboundDate'] = this.getFormattedDate(this.tmpQuotes[counter]['inboundDate']);
       this.tmpQuotes[counter]['outboundDate'] = this.getFormattedDate(this.tmpQuotes[counter]['outboundDate']);
 

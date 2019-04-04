@@ -1,6 +1,6 @@
 {
   "name": "exploradordeviajes-ng",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "The interface for the search mechanism of ExploradorDeViajes.com",
   "keywords": [
     "angular",
@@ -144,7 +144,7 @@
     "tslib": "^1.6.1",
     "tslint": "~4.5.1",
     "tslint-loader": "^3.5.2",
-    "typedoc": "^0.5.10",
+    "typedoc": "^0.14.2",
     "typescript": "~2.2.2",
     "url-loader": "^0.5.8",
     "webpack": "~2.4.1",
